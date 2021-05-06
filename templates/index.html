@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Flas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Sample Flask</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <form method="POST" action="/send" role="form", name="players_form">
+
+                    <div class="form-group">
+                        <label for="inputSeason">Season</label>
+                        <select class="form-control" id="inputSeason" name="season" placeholder="Season">
+                            <option value="2002">2002</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputTeam">Team</label>
+                        <select class="form-control" id="inputTeam" name="team" placeholder="Team">
+                            <option value="B">B</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPlayer">Player</label>
+                        <select class="form-control" id="inputPlayer" name="player" placeholder="Player">
+                            <option value="Y">Y</option>
+                        </select>
+                    </div>
+                    
+                    <input type="submit" value="submit" class="btn btn-primary">
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app_json.js') }}"></script>
+</body>
+
+</html>
